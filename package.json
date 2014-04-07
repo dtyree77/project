@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test":"bash test.sh",
     "start": "node service.js"
   },
   "author": "",
