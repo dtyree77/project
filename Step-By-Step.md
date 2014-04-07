@@ -122,6 +122,8 @@ here you can test your service.
 
 Click _Run all test cases_
 
+![The tests running](https://raw.githubusercontent.com/dtyree77/project/master/images/tests.png)
+
 This will cause your browser to make the approproate HTTP requests to
 the service to test it. 
 
@@ -193,6 +195,8 @@ Click Sign in with Github
 
 The project you created in GitHub should show up as a project in Travis-CI for you, once it does
 click the slider to turn on Travis CI for your project. 
+
+![Travis CI Repo Selection](https://raw.githubusercontent.com/dtyree77/project/master/images/travis-ci-repos.png)
 
 #### 4. Create a .travis.yml file for your project
 
