@@ -3,22 +3,38 @@
 This step-by-step will guide you through creating HopJS based micro-service from scratch on GitHub and integrating it with 
 Travis-CI (A SaaS based Continous Integration build server) and Coveralls a code coverage reporting tool. 
 
+*This tutorial has not been tested on windows*
+
 ## 1. Create a github account
 
-## 2. Download and install Node.JS on your local laptop
+Go to http://github.com/ and create a new account for yourself. 
+
+## 2. Download and install Node.JS on your local desktop/laptop 
+
+Download and install node.js from:
 
 http://nodejs.org/download/
 
-## 3. Open a local command line window
+## 3. Download and install git
 
-## 4. Create a new project
+Download and install git from:
+
+http://git-scm.com/downloads
+
+## 4. Open a local command line window
+
+Open your favorite terminal program
+
+## 5. Create a new project
+
+In your command line:
 
 ```shell
 mkdir project
 cd project
 ```
 
-## 5. Create a basic node project
+## 6. Create a basic node project
 
 ```shell
 npm init . 
@@ -34,7 +50,11 @@ it, etc.
 
 For more details see: https://www.npmjs.org/doc/json.html
 
-## 6. Let's install some dependencies
+## 7. Installing depdendencies
+
+NPM is the Node.JS package manager and can do many things, including 
+install dependent packages. In this step we will install a few 
+packages.
 
 ```shell
 npm install hopjs express --save
@@ -43,33 +63,34 @@ npm install hopjs express --save
 This will install hopjs and the express depdendencies
 adding them to your package.json file. 
 
-HopJS is a RESTful framework 
-Express.JS is a web framework
+HopJS is a RESTful framework ( see http://github.com/celer/hopjs/ )
+Express.JS is a web framework ( see http://expressjs.com/ )
 
-By specifying '--save' we're telling npm to save
+By specifying --save we are telling npm to save
 these depdencies in our package.json
 
-Next we'll install some development depdendencies
+Next we will install some development depdendencies
 
 ```shell
 npm install hopjs-remote istanbul coveralls --save-dev
 ```
 
 These are tools which are required for testing and code
-coverage. By specifying '--save-deps' we tell npm 
+coverage. By specifying --save-deps we tell npm 
 to save them as part of our development dependencies.
 
-## 7. Let's create a REST-like webservice:
+## 8. Create a REST-like webservice
 
 Copy the contents of this service: 
 
 https://github.com/dtyree77/project/blob/master/service.js
 
-And put it into a file in your local project directory called service.js.
+And put it into a file in your local project directory called service.js. Feel free
+to examine the source of this file, it describes a simple REST-like service which counts. 
 
 This file is the guts of our RESTful service, it defines the service and how to test it. 
 
-## 8. Let's modify the package.json so npm knows how to start the service:
+## 9. Modify the package.json so npm knows how to start the service:
 
 Add "start":"node service.js" to the "scripts" object in the package.json, like so:
 
@@ -83,37 +104,40 @@ Add "start":"node service.js" to the "scripts" object in the package.json, like 
 
 This tells npm the command line required to start your application. 
 
-## 9. Start your server
+Your package.json will ultimately look like this: https://github.com/dtyree77/project/blob/master/package.json. If NPM complains about a syntax
+error it is likely beause of a dangling comma at the end of an object or array. 
+
+## 10. Start your server
 
 ```shell
 npm start
 ```
 
-## 10. Open a web browser to http://localhost:3000/api/ 
+## 11. Open a web browser to http://localhost:3000/api/ 
 
 You should now see a documentation page about your new service. From
 here you can test your service. 
 
-## 11. Run the tests on your service 
+## 12. Run the tests on your service 
 
-Click 'Run all test cases'
+Click _Run all test cases_
 
 This will cause your browser to make the approproate HTTP requests to
 the service to test it. 
 
-## 12. Stop your service
+## 13. Stop your service
 
-In your command line window you can hit 'ctrl-c'
+In your command line window you can hit _ctrl-c_
 
 # Checking your project into Github
 
 ## 1. Go to http://github.com/ and login
 
-## 2. In the lower right hand side click the 'New respository' link
+## 2. In the lower right hand side click the _New respository_ link
 
 ## 3. Choose an appropriopriate name for your project, leave all the other settings alone
 
-## 4. Click 'Create Repository'
+## 4. Click _Create Repository_
 
 Take note of the https url in the text box on the next page, this is the https URL for your newly created repository. 
 
@@ -152,6 +176,9 @@ git commit -m "Initiail checkin"
 git push -u origin master
 ```
 
+(This step should ask you for your github.com username and password, if you have forgoten your password you can reset it from
+the accounts page on github.) 
+
 # Integrate with Travis-CI (Continous-Integration testing)
 
 ## 1. Login to travis.ci
@@ -178,7 +205,7 @@ This file tells travis CI what type of project it is, so it knows how to test it
 
 ## 5. Create a README.md file in your project
 
-In your project edit a file called 'README.md' and put this line in it, changing your username and project
+In your project edit a file called _README.md_ and put this line in it, changing your username and project
 name to be the same as your github username and project name
 
 ```
@@ -211,25 +238,25 @@ git push
 
 Now visit http://travis-ci.org/ (login if necessary) and in a few minutes you should see your first build. 
 
-## 8. Now let's run our tests from the command line:
+## 8. Run the tests from the command line:
 
-Create a new file 'test.sh' and put the following information in it:
+Create a new file _test.sh_ and put the following information in it:
 
 https://github.com/dtyree77/project/blob/master/test.sh
 
 ## 9. Modify the package.json to run your test script
 
+```javascript
 "scripts": {
   "test":"bash test.sh",
   "start":"node service.js"
 },
+```
 
 ## 10. Test it by hand 
 
 ```shell
-
 npm test
-
 ``
 
 ## 11. Commit your changes
@@ -246,13 +273,13 @@ You can now check your build status on http://travis-ci.org/ if you desire.
 
 1. Go to http://coveralls.io/
 
-2. Click 'Free sign up'
+2. Click _Free sign up_
 
-3. Once directed back to github click 'Authorize'
+3. Once directed back to github click _Authorize_
 
 4. Enable code coverage reporting for your application
 
-5. Click 'View on coveralls'
+5. Click _View on coveralls_
 
 6. Create a .coveralls.yml file in your repo with the token shown on the coveralls web pagea
 
@@ -274,7 +301,7 @@ git push
 
 9. Add your badge for code coverage to the README.md, save and commit it
 
-(Put your username and project name in the URL's below as appropriate)
+(Put your username and project name in the URLs below as appropriate)
 ```
 [![Code Coverage](https://coveralls.io/repos/[USERNAME]/[PROJECT]/badge.png?branch=master)](https://coveralls.io/r/[USERNAME]/[PROJECT])
 ```
