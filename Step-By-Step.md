@@ -257,7 +257,7 @@ https://github.com/dtyree77/project/blob/master/test.sh
 
 ```shell
 npm test
-``
+```
 
 ## 11. Commit your changes
 
@@ -265,7 +265,7 @@ npm test
   git add test.sh package.json
   git commit -m "Added test script"
   git push 
-``
+```
 
 You can now check your build status on http://travis-ci.org/ if you desire. 
 
@@ -285,7 +285,7 @@ You can now check your build status on http://travis-ci.org/ if you desire.
 
 For example:
 
-```
+```yaml
   repo_token: eON9bUHcaGRsnX652e2oMurXyA5rG67ax
 ```
 
