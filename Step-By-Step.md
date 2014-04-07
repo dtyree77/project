@@ -271,17 +271,17 @@ You can now check your build status on http://travis-ci.org/ if you desire.
 
 # Integrating with coveralls.io (Code coverage)
 
-1. Go to http://coveralls.io/
+## 1. Go to http://coveralls.io/
 
-2. Click _Free sign up_
+## 2. Click _Free sign up_
 
-3. Once directed back to github click _Authorize_
+## 3. Once directed back to github click _Authorize_
 
-4. Enable code coverage reporting for your application
+## 4. Enable code coverage reporting for your application
 
-5. Click _View on coveralls_
+## 5. Click _View on coveralls_
 
-6. Create a .coveralls.yml file in your repo with the token shown on the coveralls web pagea
+## 6. Create a .coveralls.yml file in your repo with the token shown on the coveralls web pagea
 
 For example:
 
@@ -289,7 +289,7 @@ For example:
   repo_token: eON9bUHcaGRsnX652e2oMurXyA5rG67ax
 ```
 
-7. Added to your local repo
+## 7. Added to your local repo
 
 ```shell
 git add .coveralls.yml
@@ -297,9 +297,9 @@ git commit -m "Added coveralls file"
 git push
 ``` 
 
-8. Check your coveralls page for your project details
+## 8. Check your coveralls page for your project details
 
-9. Add your badge for code coverage to the README.md, save and commit it
+## 9. Add your badge for code coverage to the README.md, save and commit it
 
 (Put your username and project name in the URLs below as appropriate)
 ```
@@ -319,5 +319,6 @@ git commit -m "Updated readme"
 git push
 ```
 
-10. View your github page to see the new badge
+## 10. View your github page to see the new badge
+
 
