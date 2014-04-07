@@ -191,7 +191,8 @@ Click Sign in with Github
 
 #### 3. Enable travis CI on your project
 
-The project you created in GitHub should show up as a project in Travis-CI for you. 
+The project you created in GitHub should show up as a project in Travis-CI for you, once it does
+click the slider to turn on Travis CI for your project. 
 
 #### 4. Create a .travis.yml file for your project
 
@@ -278,6 +279,9 @@ You can now check your build status on http://travis-ci.org/ if you desire.
 #### 3. Once directed back to github click _Authorize_
 
 #### 4. Enable code coverage reporting for your application
+
+Once directed back to coveralls simply turn on your repo for code coverage support
+with coveralls. 
 
 #### 5. Click _View on coveralls_
 
