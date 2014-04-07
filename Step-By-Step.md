@@ -287,7 +287,7 @@ You can now check your build status on http://travis-ci.org/ if you desire.
 Once directed back to coveralls simply turn on your repo for code coverage support
 with coveralls. 
 
-![Coveralls Repo Selection](https://raw.githubusercontent.com/dtyree77/project/master/images/coveralls-repos.png)
+![Coveralls Repo Selection](https://raw.githubusercontent.com/dtyree77/project/master/images/coveralls_repos.png)
 
 #### 5. Click _View on coveralls_
 
