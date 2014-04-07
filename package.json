@@ -1,0 +1,20 @@
+{
+  "name": "project",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node service.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hopjs": "0.0.40",
+    "express": "^3.5.1"
+  },
+  "devDependencies": {
+    "coveralls": "^2.10.0",
+    "istanbul": "^0.2.7",
+    "hopjs-remote": "0.0.34"
+  }
+}
